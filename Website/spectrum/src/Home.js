@@ -8,7 +8,7 @@ export default function Home(){
         <div>
             <h1>Hi! Home page</h1>
             <hr/>
-            <button onClick = {() => navigate("/flower")}>Go to spring</button>
+            <button onClick = {() => navigate("/spring")}>Go to spring</button>
         </div>
     )
     
