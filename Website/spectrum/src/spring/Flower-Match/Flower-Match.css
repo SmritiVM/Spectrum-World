@@ -1,0 +1,8 @@
+.imageBoard{
+    display: flex;
+}
+.imageCard{
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+}
