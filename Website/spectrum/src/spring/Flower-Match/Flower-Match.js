@@ -64,10 +64,10 @@ export default function Flower_Match(){
     return(
         <div>
             <h1>This is flower page</h1>
-            <div className="imageBoard">
+            <div className="row">
                 {imagesArray.map((image, index) => {
                     return(
-                        <div key = {index} onClick={() => flipImage(image, index)}>
+                        <div className = "col-4 col-lg-2" key = {index} onClick={() => flipImage(image, index)}>
                         <img src = {isCardChosen(image, index) ? image : COVER_IMG} alt = "" 
                         className="imageCard"/>
                         </div>
