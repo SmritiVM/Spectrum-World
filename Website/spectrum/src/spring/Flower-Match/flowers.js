@@ -1,6 +1,6 @@
 export const images = [
-    "https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-helena-lopes-2253275.jpg",
-	"https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-marko-blazevic-774731.jpg",
+    "Flower-Match/Flowers_pic/daisy.jpg",
+	"C:/Users/gpish/Documents/GitHub/Spectrum-World/Website/spectrum/src/spring/Flower-Match/Flowers_pic/hibiscus.png",
 	"https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-magda-ehlers-451230.jpg",
 	"https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-funny-foxy-pride-6244506.jpg",
 	"https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-kat-wood-7113831.jpg",
