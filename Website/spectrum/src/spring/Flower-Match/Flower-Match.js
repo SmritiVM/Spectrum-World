@@ -47,7 +47,7 @@ export default function Flower_Match(){
                 setTimeout(() => {
                     setCardsChosenIds([])
                     setCardsChosen([])
-                }, 700);
+                }, 1200);
             }
         }
 
@@ -65,11 +65,10 @@ export default function Flower_Match(){
         <div>
             <div className="row">
                 {imagesArray.map((image, index) => {
-                    const flipped = isCardChosen(image,index);
                     return(
-                        <div className = "col-4 col-lg-2" key = {index} onClick={() => flipImage(image, index)}>
-                        <img src = {flipped ? image : COVER_IMG} alt = "" 
-                        className= {flipped ? "imageCard": "imageCard"}/>
+                        <div className = "col-4 col-lg-2 flipped" key = {index} onClick={() => flipImage(image, index)}>
+                        <img src = {isCardChosen(image, index) ? image : COVER_IMG} alt = "" 
+                        className= "imageCard"/>
                         </div>
                     )
                 })}
