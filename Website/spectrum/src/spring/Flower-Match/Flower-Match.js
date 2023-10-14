@@ -63,13 +63,13 @@ export default function Flower_Match(){
 
     return(
         <div>
-            <h1>This is flower page</h1>
             <div className="row">
                 {imagesArray.map((image, index) => {
+                    const flipped = isCardChosen(image,index);
                     return(
                         <div className = "col-4 col-lg-2" key = {index} onClick={() => flipImage(image, index)}>
-                        <img src = {isCardChosen(image, index) ? image : COVER_IMG} alt = "" 
-                        className="imageCard"/>
+                        <img src = {flipped ? image : COVER_IMG} alt = "" 
+                        className= {flipped ? "imageCard": "imageCard"}/>
                         </div>
                     )
                 })}
