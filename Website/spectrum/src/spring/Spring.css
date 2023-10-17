@@ -1,13 +1,17 @@
 .spring{
-    width: 100%;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     
-    
+      
 }
+
 .next{
     position: absolute;
     bottom: 10px;
     left: 50%;
     margin-left: -104.5px;
+    width: 100px;
 }
 

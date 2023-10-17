@@ -16,7 +16,10 @@ export default function Spring(){
             <h1>This is spring page</h1>
             </Row>
             <Row>
-            <button className = "next" onClick = {() => navigate("/flower")}>Go to flower match game</button>
+                <Col md = {11}><div></div></Col>
+                <Col>
+                <button className = "next" onClick = {() => navigate("/flower")}>Go to flower match game</button>
+                </Col>
             </Row>
         </Container>
     )
