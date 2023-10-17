@@ -1,6 +1,6 @@
 import {React, useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import {Container} from "react-bootstrap";
+import {Container, Row , Col} from "react-bootstrap";
 
 import Back1 from "./assets/back_1.png";
 
@@ -11,10 +11,13 @@ export default function Spring(){
     const [background, setBackground] = useState(`url(${Back1})`);
     
     return(
-        <div className = "container" style={{"backgroundImage":background}}>
+        <Container fluid className = "spring" style={{"backgroundImage":background}}>
+            <Row>
             <h1>This is spring page</h1>
-            <hr/>
+            </Row>
+            <Row>
             <button className = "next" onClick = {() => navigate("/flower")}>Go to flower match game</button>
-        </div>
+            </Row>
+        </Container>
     )
 }
