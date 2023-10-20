@@ -23,12 +23,12 @@ export default function Spring(){
     const goToBack2 = () => {
         setBackground(`url(${Back2})`);
         setNext(
-            <button className = "next" onClick = {goToBack4}>yo</button>
+            <button className = "next" onClick = {goToBack4}>Next</button>
         )
     }
 
     const [next, setNext] = useState(
-        <button className = "next" onClick = {goToBack2}>Like</button>
+        <button className = "next" onClick = {goToBack2}>Next</button>
     
     )
     
