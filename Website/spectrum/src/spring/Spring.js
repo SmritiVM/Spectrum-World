@@ -1,12 +1,33 @@
 import {React, useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import {Container, Row , Col} from "react-bootstrap";
+import { IconButton} from '@mui/material';
+import {styled} from '@mui/material/styles';
+
+import ForwardIcon from '@mui/icons-material/Forward';
 
 import Back1 from "./assets/back_1.png";
 import Back2 from "./assets/back_2.png";
 import Back4 from "./assets/back_4.jpg";
 
 import "./Spring.css";
+import { Next } from "react-bootstrap/esm/PageItem";
+
+const NextIcon = styled(ForwardIcon)(() => ({
+    fontSize: "100px",
+    // color: "rgb(11, 141, 11)",
+    opacity: "1"
+}))
+
+const NextButton = styled(IconButton)(() => ({
+    position: "absolute",
+    marginTop: "500px",
+    bottom: "10px",
+    left: "95%",
+    marginLeft: "-104.5px",
+    width: "100px",
+    
+}))
 
 export default function Spring(){
     const navigate = useNavigate();
@@ -16,28 +37,26 @@ export default function Spring(){
     const goToBack4 = () => {
         setBackground(`url(${Back4})`);
         setNext(
-            <button className = "next" onClick = {() => navigate("/flower")}>Go to flower match game</button>
+            <NextButton onClick = {() => navigate("/flower")}><NextIcon/></NextButton>
         )
 
     }
     const goToBack2 = () => {
         setBackground(`url(${Back2})`);
         setNext(
-            <button className = "next" onClick = {goToBack4}>Next</button>
+            <NextButton onClick = {goToBack4}><NextIcon/></NextButton>
         )
     }
 
     const [next, setNext] = useState(
-        <button className = "next" onClick = {goToBack2}>Next</button>
+        <NextButton
+        onClick = {goToBack2}><NextIcon/></NextButton>
     
     )
     
     
     return(
         <Container fluid className = "spring" style={{"backgroundImage":background}}>
-            <Row>
-            <h1>This is spring page</h1>
-            </Row>
             <Row>
                 <Col md = {11}><div></div></Col>
                 <Col>
