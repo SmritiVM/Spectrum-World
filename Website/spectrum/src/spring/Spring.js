@@ -58,7 +58,11 @@ export default function Spring(){
     return(
         <Container fluid className = "spring" style={{"backgroundImage":background}}>
             <Row>
-                <Col md = {11}><div></div></Col>
+                <Col md = {11}><div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet mattis leo, eget maximus 
+                        purus dictum ac. In hac habitasse platea dictumst. Integer auctor, leo eu commodo malesuada, ante nisi laoreet mauris, vitae semper felis mauris vitae massa.
+                    </p>
+                    </div></Col>
                 <Col>
                 {next}
                 </Col>
