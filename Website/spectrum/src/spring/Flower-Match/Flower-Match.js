@@ -1,5 +1,5 @@
 // Flower-Match minigame
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import {images} from './flowers';
 
@@ -62,7 +62,7 @@ export default function Flower_Match(){
     }, [])
 
     return(
-        <div>
+        <div className="imageBoard">
             <div className="row">
                 {imagesArray.map((image, index) => {
                     return(

@@ -1,9 +1,14 @@
+  .imageBoard{
+    margin-top: 5%;
+  }
+  
   .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 600px;
     margin: 0 auto;
+
   }
   
   .imageCard {

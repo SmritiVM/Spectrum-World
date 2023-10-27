@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import {Container, Row , Col} from "react-bootstrap";
 import { IconButton} from '@mui/material';
@@ -11,7 +11,7 @@ import Back2 from "./assets/back_2.png";
 import Back4 from "./assets/back_4.jpg";
 
 import "./Spring.css";
-import { Next } from "react-bootstrap/esm/PageItem";
+
 
 const NextIcon = styled(ForwardIcon)(() => ({
     fontSize: "100px",
@@ -58,11 +58,11 @@ export default function Spring(){
     return(
         <Container fluid className = "spring" style={{"backgroundImage":background}}>
             <Row>
-                <Col md = {11}><div>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet mattis leo, eget maximus 
+                <Col md = {11}>
+                    <p className="dialogue"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet mattis leo, eget maximus 
                         purus dictum ac. In hac habitasse platea dictumst. Integer auctor, leo eu commodo malesuada, ante nisi laoreet mauris, vitae semper felis mauris vitae massa.
                     </p>
-                    </div></Col>
+                    </Col>
                 <Col>
                 {next}
                 </Col>
