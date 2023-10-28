@@ -13,5 +13,6 @@ Spectrum-World is a story-based game catering to people belonging to the autism 
 ## Running the application
 - Make sure that NodeJS is installed. Version utilized in this project can be installed from: https://nodejs.org/en/blog/release/v18.12.1
 - Clone the repository and navigate to Website/spectrum in the Terminal
+- Install all the necessary dependencies ``` npm install ```
 - Run the following command ``` npm start ```
 - Navigate to ```localhost:3000``` on your computer to view the running application
