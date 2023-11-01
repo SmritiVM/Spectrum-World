@@ -15,14 +15,14 @@
         }
         #board {
             display: grid;
-            grid-template-columns: repeat(38, 40px); /* Adjust the number of columns and size as needed */
+            grid-template-columns: repeat(19, 80px); /* Adjust the number of columns and size as needed */
             grid-gap: 0px; /* Adjust the gap between tiles */
             box-sizing: border-box;
             margin: auto;
         }
         .tile {
-            width: 40px;
-            height: 40px;
+            width: 80px;
+            height: 80px;
             background-color: #18931ee6;
             /*background-color: transparent;*/
             border: 0px solid #0d5309d2;
@@ -32,8 +32,8 @@
             box-sizing: border-box;
         }
         #character {
-            width: 40px;
-            height: 40px;
+            width: 80px;
+            height: 80px;
             position: absolute;
             bottom: 0;
         }
@@ -43,9 +43,9 @@
     <div id = "board"></div>
     <img id = "character" src = "avatar.png" alt = "Person">
     <script>
-        const numRows = 19;
-        const numCols = 38;
-        const tileSize = 40;
+        const numRows = 10;
+        const numCols = 19;
+        const tileSize = 80;
 
         const board = document.getElementById('board');
         const Person = document.getElementById('character');
@@ -57,14 +57,13 @@
 
                 const tile = document.createElement('div');
                 tile.className = 'tile';
-
+                //tile.textContent = row.toString()+col.toString(); //for easy identification of row and col number of tiles
                 // Creating the paths
                 if (
-                    ((2 < col && col < 6) && (0 <= row && row <= 13)) || 
-                    ((2 < col && col < 34) && (14 <= row && row <= 15)) ||
-                    ((17 <= col && col < 20) && (0 <= row && row <= 13)) ||
-                    ((31 <= col && col < 34) && (0 <= row && row <= 13)) ||
-                    ((16 <= col && col < 21) && (16 <= row && row <= 18))
+                    ((4 < col && col < 7) && (0 <= row && row <= 5)) || 
+                    ((11 < col && col < 14) && (0 <= row && row <= 5)) ||
+                    ((5 <= col && col <= 13) && (6 <= row && row <= 7)) ||
+                    ((8 <= col && col <= 10) && (8 <= row && row <= 9)) 
                     )
                 {
                     //console.log("Check")
@@ -78,10 +77,9 @@
                     tile.appendChild(stone);
                     boardData[row][col] = 1;
                 } 
-
+                
                 else{
-                    //tile.textContent = row.toString()+col.toString(); //for easy identification of row and col number of tiles
-                    const meadow = ['grasstile.png', 'flowertile.png'];
+                    const meadow = ['flowertile11.png','flowertile12.png','flowertile8.png','flowertile10.png'];
                     const fieldtile = meadow[Math.floor(Math.random() * meadow.length)];
                     const grass = document.createElement('img');
                     grass.src = fieldtile
@@ -97,8 +95,8 @@
             }
         }
 
-        let PersonRow = 18;
-        let PersonCol = 18;
+        let PersonRow = 9;
+        let PersonCol = 9;
 
         document.addEventListener('keydown', (event) => {
             switch (event.key) {
