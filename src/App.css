@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+.box2{
+  background-color: #9bb8f2;
+}
+.text{
+  width: 940px;
+  height: 121px;
+  text-align: right;
+  color:#6592ed;
+  font-family: ROG Fonts;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.background-container{
+  background-color: #e1caf1;
+}
