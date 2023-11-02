@@ -1,14 +1,38 @@
 .spring{
     height: 100vh;
+    display: flex;
+    justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    filter: saturate(160%);
+    scale: 0.85;
+    border-radius: 50px;
+    
     
       
 }
 
+.content{
+    position: absolute;
+    justify-content: center;
+    margin-top: 500px;
+    bottom: 10px;
+    height: 25vh;
+    width: 60%;
+    backdrop-filter: contrast(50%);
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .dialogue{
-    margin-top: 87%;
-    background-color: aqua;
+    position: relative;
+    margin-top: 20px;
+    margin-left: -80px;
+    justify-content: center;
+    max-width: 450px;
+    color: white;
+    font-size: 2vw;
+    word-wrap: break-word;
 }
