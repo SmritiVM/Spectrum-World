@@ -1,0 +1,36 @@
+/* pathwaystyle.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Make sure the body takes up the full height of the viewport */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(19, 80px); /* Adjust the number of columns and size as needed */
+    grid-gap: 0px; /* Adjust the gap between tiles */
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.tile {
+    width: 80px;
+    height: 80px;
+    background-color: #18931ee6;
+    /*background-color: transparent;*/
+    border: 0px solid #0d5309d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#character {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+}
