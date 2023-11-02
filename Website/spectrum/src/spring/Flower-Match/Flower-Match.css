@@ -2,11 +2,10 @@
     margin-top: 5%;
   }
   
-  .row {
+  .imgRow {
     justify-content: center;
     max-width: 600px;
     margin: 0 auto;
-
   }
   
   .imageCard {

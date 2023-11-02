@@ -47,7 +47,7 @@ export default function FlowerMatch(){
                 setTimeout(() => {
                     setCardsChosenIds([])
                     setCardsChosen([])
-                }, 1200);
+                }, 700);
             }
         }
 
@@ -63,7 +63,7 @@ export default function FlowerMatch(){
 
     return(
         <div className="imageBoard">
-            <div className="row">
+            <div className="row imgRow">
                 {imagesArray.map((image, index) => {
                     return(
                         <div className = "col-4 col-lg-2 flipped" key = {index} onClick={() => flipImage(image, index)}>
