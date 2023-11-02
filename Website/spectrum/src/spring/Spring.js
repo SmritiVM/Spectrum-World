@@ -7,6 +7,8 @@ import {styled} from '@mui/material/styles';
 import ForwardIcon from '@mui/icons-material/Forward';
 import {Avatar} from "@mui/material";
 
+import Typewriter from "typewriter-effect";
+
 import defaultAvatar from "./assets/avatar.png";
 import WebsiteBackground from "./assets/Background.jpg";
 import Back1 from "./assets/backgrounds/back_1.png";
@@ -43,7 +45,13 @@ const AvatarIcon = styled(Avatar)(() => ({
 export default function Spring(){
     const navigate = useNavigate();
     const [background, setBackground] = useState(`url(${Back1})`);
+    const [dialogue, setDialogue] = useState("Oh...what a pretty sight!");
 
+    //All dialogue changing functions
+    const nextDialogue1 = () => {
+        setDialogue("Let's go on an adventure!")
+    }
+    
     // All background changing functions
     const goToBack4 = () => {
         setBackground(`url(${Back4})`);
@@ -59,6 +67,7 @@ export default function Spring(){
         )
     }
 
+    //Use State to change dialogues and backgrounds
     const [next, setNext] = useState(
         <NextButton
         onClick = {goToBack2}><NextIcon/></NextButton>
@@ -75,7 +84,14 @@ export default function Spring(){
                             <AvatarIcon alt = "Person" src = {defaultAvatar} />
                         </Col>
                         <Col md = {7}>
-                            <p className="dialogue"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            <p className="dialogue">
+                            <Typewriter
+                                onInit = {(typewriter) => {
+                                    typewriter
+                                    .typeString(dialogue)
+                                    .start();}} 
+                                
+                                />
                             </p>
                             </Col>
                         <Col md = {1}>
