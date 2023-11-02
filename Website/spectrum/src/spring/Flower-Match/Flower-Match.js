@@ -5,7 +5,7 @@ import {images} from './flowers';
 
 import './Flower-Match.css';
 
-export default function Flower_Match(){
+export default function FlowerMatch(){
     const COVER_IMG = "https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-pixabay-235985-scaled.jpg";
     const [imagesArray, setImagesArray] = useState([]);
     const [cardsChosen, setCardsChosen] = useState([]);

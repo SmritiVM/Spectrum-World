@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import LoginPage2 from './signup.jsx';
 import Home from './Home.js';
 import Spring from './spring/Spring.js';
-import Flower_Match from './spring/Flower-Match/Flower-Match.js';
+import FlowerMatch from './spring/Flower-Match/Flower-Match.js';
+import Pathway from './spring/Pathway-Game/pathway.js';
+
 
 export default function page(){
     return (
@@ -17,7 +19,8 @@ export default function page(){
             <Routes>
                 <Route path = "/" element = {<Home/>}/>
                 <Route path = "/spring" element = {<Spring/>}/>
-                <Route path = "/flower" element = {<Flower_Match/>}/>
+                <Route path = "/flower" element = {<FlowerMatch/>}/>
+                <Route path = "/pathway" element = {<Pathway/>}/>
             </Routes>
         </Router>
     );
