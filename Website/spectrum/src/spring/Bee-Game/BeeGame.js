@@ -43,7 +43,7 @@ const NextButton = styled(IconButton)(() => ({
 const AvatarIcon = styled(Avatar)(() => ({
     position: "relative",
     marginTop: "50px",
-    marginLeft: "90px",
+    marginLeft: "50px",
     scale: "2.5",
 }))
 
