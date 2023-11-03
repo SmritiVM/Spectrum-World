@@ -1,9 +1,13 @@
 // Flower-Match minigame
 import { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 
 import {images} from './flowers';
+import WebsiteBackground from "../assets/Background.jpg";
+import BeeGarden from "../Bee-Game/assets/bee_garden.jpeg";
 
 import './Flower-Match.css';
+import '../Spring.css'
 
 export default function FlowerMatch(){
     const COVER_IMG = "https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-pixabay-235985-scaled.jpg";
@@ -62,17 +66,21 @@ export default function FlowerMatch(){
     }, [])
 
     return(
-        <div className="imageBoard">
-            <div className="row imgRow">
-                {imagesArray.map((image, index) => {
-                    return(
-                        <div className = "col-4 col-lg-2 flipped" key = {index} onClick={() => flipImage(image, index)}>
-                        <img src = {isCardChosen(image, index) ? image : COVER_IMG} alt = "" 
-                        className= "imageCard"/>
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
+        <Container fluid className="back" style = {{"backgroundImage": `url(${WebsiteBackground})`}}> 
+            <Container fluid className = "spring" style={{"backgroundImage":`url(${BeeGarden})` ,"filter": "saturate(70%)"}}>
+                <div className="imageBoard">
+                    <div className="row imgRow">
+                        {imagesArray.map((image, index) => {
+                            return(
+                                <div className = "col-4 col-lg-2 flipped" key = {index} onClick={() => flipImage(image, index)}>
+                                <img src = {isCardChosen(image, index) ? image : COVER_IMG} alt = "" 
+                                className= "imageCard"/>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            </Container>
+        </Container>
     )
 }

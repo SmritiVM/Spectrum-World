@@ -1,5 +1,6 @@
   .imageBoard{
     margin-top: 5%;
+    filter: saturate(200%);
   }
   
   .imgRow {
