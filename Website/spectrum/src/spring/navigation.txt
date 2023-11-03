@@ -1,0 +1,13 @@
+1. goToBack2(bedroom): setContentContrast to 40, delete instructions content,
+    setDialogue to narrator (about Alex sleeping, gets up to look out of window)
+    onClick -> goToBack3
+2. goToBack3(window): setDialogue to "pretty sight + go on adventure"
+    setAvatar to defaultAvatar
+    onClick -> goToBack4
+3. goToBack4(pathway): setDialogue(narrator)
+    setAvatar to blank
+    onClick -> goToPathway
+4. goToPathway(pathway): setDialogue(explore)
+    setAvatar to defaultAvatar
+    onClick -> go to pathway
+
