@@ -59,10 +59,13 @@ export default function Spring(){
             options = {{
                 delay: 0,
                 cursor: "",
+                deleteSpeed: 0
             }}
             onInit={(typewriter) => {
-                typewriter.typeString("Hello there explorer! Welcome to the season of spring! The gentle breeze, the chirping birds, the blooming flowers…ah the season of vibrant colours and enchanting fragrances - the season when everything comes alive! Far, far away, nestled in the heart of such a land lies the homely cottage of our dear protagonist, " + `${user}` + ". Wondering what's in store for spring? Let's follow " + `${user}` + " through the beginning of the journey of seasons and find out along the way. Click on the arrow to proceed with the story.")
-                .pauseFor(2500)
+                typewriter.typeString("Hello there explorer! Welcome to the season of spring! The gentle breeze, the chirping birds, the blooming flowers…ah the season of vibrant colours and enchanting fragrances - the season when everything comes alive! ")
+                .pauseFor(3500)
+                .deleteAll(0)
+                .typeString("Far, far away, nestled in the heart of such a land lies the homely cottage of our dear protagonist, " + `${user}` + ". Wondering what's in store for spring? Let's follow " + `${user}` + " through the beginning of the journey of seasons and find out along the way. Click on the arrow to proceed with the story.")
                 .start();    
             }}
         />
@@ -141,6 +144,7 @@ export default function Spring(){
                                 options = {{
                                     strings: dialogue,
                                     autoStart: true,
+                                    deleteSpeed: 0,
                                     delay: 0,
                                     cursor: "",
                                 }}    
