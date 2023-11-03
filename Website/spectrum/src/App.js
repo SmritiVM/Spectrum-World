@@ -7,6 +7,7 @@ import Home from './Home.js';
 import Spring from './spring/Spring.js';
 import FlowerMatch from './spring/Flower-Match/Flower-Match.js';
 import Pathway from './spring/Pathway-Game/pathway.js';
+import BeeGame from './spring/Bee-Game/BeeGame.js';
 
 
 export default function page(){
@@ -21,6 +22,7 @@ export default function page(){
                 <Route path = "/spring" element = {<Spring/>}/>
                 <Route path = "/flower" element = {<FlowerMatch/>}/>
                 <Route path = "/pathway" element = {<Pathway/>}/>
+                <Route path = "/bee" element = {<BeeGame/>}/>
             </Routes>
         </Router>
     );
