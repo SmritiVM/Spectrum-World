@@ -11,3 +11,34 @@
     setAvatar to defaultAvatar
     onClick -> go to pathway
 
+
+BeeGame.js
+Initial dialogue -> Narrator -> Alex hearing a buzzing sound
+setAvatar(none)
+1. goToGuessing -> setInstructions(to container)
+    setAvatar(none), setDialogue(none)
+    onClick function for each 
+    onClick for bee -> goToBuzz1
+2. goToBuzz1 -> setInstructions(none)
+    setAvatar(buzz)
+    setDialogue(Hi buzz the bee)
+    setNext(goToUser1)
+3. goToUser1 -> setAvatar(defaultAvatar)
+    setDialogue(my name is user)
+    setNext(goToBuzz2)
+4. goToBuzz2 -> setAvatar(buzz)
+    setDialogue(can you help me)
+    setNext(goToBuzzHelp)
+5. goToBuzzHelp -> setInstructions(2 choice)
+    setAvatar(), setNext(), setDialogue()
+    wrong choice -> alert message  -> goToBuzz3()
+    right choice -> goToFlower
+6. goToBuzz3 -> setAvatar(buzz)
+    setDialogue(ah it's ok)
+    setNext()
+7. goToFlower() ->
+    setAvatar(buzz)
+    setInstructions()
+    setDialogue(thanks)
+    setNext(navigate to flower)
+
