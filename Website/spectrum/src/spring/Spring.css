@@ -21,7 +21,7 @@
     margin-right: auto;
     width:60%;
     font-family: "Playpen Sans";
-    color: white;
+    color: black;
     font-size: 2vw;
     /* border-radius: 50px; */
 }
@@ -33,7 +33,7 @@
     bottom: 10px;
     height: 25vh;
     width: 60%;
-    backdrop-filter: contrast(40%);
+    backdrop-filter: contrast(30%);
     border-radius: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -45,7 +45,8 @@
     margin-left: -80px;
     justify-content: center;
     max-width: 450px;
-    color: white;
+    color: black;
+    font-weight:bolder;
     font-size: 2vw;
     font-family: "Josefin Sans";
     word-wrap: break-word;
