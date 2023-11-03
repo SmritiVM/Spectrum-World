@@ -120,7 +120,7 @@ export default function BeeGame(){
     }
 
     const beeClick = () => {
-        alert("Yay! It's a Bumble bee!");
+        alert("Yay! It's a Bumble Bee!");
         goToBuzz1();
     }
 
@@ -132,7 +132,7 @@ export default function BeeGame(){
         setInstructions(
             <Container fluid className="soundGuess">
             <Row>
-                <p>Who is hiding behind the bushes?</p>
+                <p>Who is hiding behind in flowers?</p>
             </Row>
             <Row>
                 <Col md = {4}>

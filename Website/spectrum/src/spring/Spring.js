@@ -76,7 +76,7 @@ export default function Spring(){
 
     
     const goToPathway = () => {
-        setDialogue(["Wow! I've never noticed this pathway before",
+        setDialogue(["Wow! Where did this pathway appear from?",
         "You know what this means?",
         "Come on let's go explore!"]);
         setAvatar(<AvatarIcon alt = "Person" src = {defaultAvatar} />);
@@ -88,9 +88,9 @@ export default function Spring(){
     const goToBack4 = () => {
         setBackground(`url(${Back4})`);
         setAvatar();
-        setDialogue([`${user}` + " gets ready and sets out to explore the beauty outside", 
-        "The lush green trees and the colourful array of flowers sure look enticing",
-    `${user}` + " walks ahead and notices a pathway that leads outside the garden"]);
+        setDialogue([`${user}` + " gets ready and sets out to explore the beauty outside.", 
+        "The lush green trees and the colourful array of flowers sure look enticing.",
+    `${user}` + " walks ahead and notices a pathway that leads outside the garden."]);
         setNext(
             <NextButton onClick = {goToPathway}><NextIcon/></NextButton>
         )
@@ -99,7 +99,7 @@ export default function Spring(){
 
     const goToBack3 = () => {
         setBackground(`url(${Back3})`);
-        setDialogue(["Oh what a pretty sight!", "The trees look so fresh and the flowers are so vibrant", "Let's go out and see more!"]);
+        setDialogue(["Oh what a pretty sight!", "The trees look so fresh and the flowers are so vibrant.", "Let's go out and see more!"]);
         setAvatar(<AvatarIcon alt = "Person" src = {defaultAvatar} />);
         setNext(
             <NextButton onClick = {goToBack4}><NextIcon/></NextButton>
@@ -110,8 +110,8 @@ export default function Spring(){
         // setContentContrast("40%");
         // setAutoStart(true);
         setInstructions();
-        setDialogue(["It is a wonderful spring morning with the sun shining through the window and the birds singing their song",
-         `${user}` + " slowly wakes up feeling energetic and decides to go and check outside the window"]);
+        setDialogue(["It is a wonderful spring morning with the sun shining through the window and the birds singing their song.",
+         `${user}` + " slowly wakes up feeling energetic and decides to go and check outside the window."]);
         setNext(
             <NextButton onClick = {goToBack3}><NextIcon/></NextButton>
         )
