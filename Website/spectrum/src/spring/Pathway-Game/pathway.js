@@ -8,9 +8,10 @@ import flowertile10 from './flowertile10.png';
 import avatar from './avatar.png';
 
 export default function Pathway() {
+  console.log(window.innerWidth);
   const numRows = 10;
   const numCols = 19;
-  const tileSize = 80;
+  const tileSize = "5.2vw";
 
   const boardRef = useRef(null);
   const personRef = useRef(null);
@@ -61,8 +62,11 @@ export default function Pathway() {
   }
 
   function updatePersonPos() {
-    const top = PersonRow * tileSize;
-    const left = PersonCol * tileSize;
+    const vwToPx = window.innerWidth / 100;
+    const top = PersonRow * vwToPx * parseFloat(tileSize);
+    const left = PersonCol * vwToPx * parseFloat(tileSize);
+    //const top = PersonRow * tileSize;
+    //const left = PersonCol * tileSize;
     personRef.current.style.top = `${top}px`;
     personRef.current.style.left = `${left}px`;
   }
