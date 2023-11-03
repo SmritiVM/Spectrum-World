@@ -12,6 +12,19 @@
     
       
 }
+.instructions{
+    position: absolute;
+    justify-content: center;
+    backdrop-filter: contrast(20%);
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width:60%;
+    font-family: "Playpen Sans";
+    color: white;
+    font-size: 2vw;
+    /* border-radius: 50px; */
+}
 
 .content{
     position: absolute;
@@ -33,7 +46,7 @@
     justify-content: center;
     max-width: 450px;
     color: white;
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-family: "Josefin Sans";
     word-wrap: break-word;
 }
