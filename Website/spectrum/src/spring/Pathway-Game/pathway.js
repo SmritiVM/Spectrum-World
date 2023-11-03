@@ -8,18 +8,23 @@ import flowertile10 from './flowertile10.png';
 import avatar from './avatar.png';
 
 export default function Pathway() {
-  console.log(window.innerWidth);
-  const numRows = 10;
-  const numCols = 19;
   const tileSize = "5.2vw";
+  //console.log(window.innerHeight);
+  const windowHeight = window.innerHeight;
+  const windowWidth = window.innerWidth;
+  const vwToPx_w = window.innerWidth / 100;
+  const tileHeight = parseFloat(tileSize) * vwToPx_w;
+  const numRows = Math.floor(windowHeight / tileHeight);
+  const numCols = Math.floor(windowWidth / tileHeight);
 
   const boardRef = useRef(null);
   const personRef = useRef(null);
 
   const boardData = new Array(numRows).fill(null).map(() => new Array(numCols).fill(0));
-
-  let PersonRow = 9;
-  let PersonCol = 9;
+  const midCol = Math.floor(numCols / 2);
+  
+  let PersonRow = numRows-1;
+  let PersonCol = midCol;
 
   function createGrid() {
     for (let row = 0; row < numRows; row++) {
@@ -29,11 +34,12 @@ export default function Pathway() {
 
         // Creating the paths
         if (
-          ((4 < col && col < 7) && (0 <= row && row <= 5)) ||
-          ((11 < col && col < 14) && (0 <= row && row <= 5)) ||
-          ((5 <= col && col <= 13) && (6 <= row && row <= 7)) ||
-          ((8 <= col && col <= 10) && (8 <= row && row <= 9))
-        ) {
+          ((midCol-5 < col && col < midCol-2) && (0 <= row && row <= numRows-5)) ||
+          ((midCol+2 < col && col < midCol+5) && (0 <= row && row <= numRows-5)) ||
+          ((midCol-4 <= col && col <= midCol+4) && (numRows-4 <= row && row <= numRows-3)) ||
+          ((midCol-1 <= col && col <= midCol+1) && (numRows-2 <= row && row <= numRows-1))
+        ) 
+        {
           const stone = document.createElement("img");
           stone.src = stonetile; // Path to the stone pathway image
           stone.alt = "Path";
@@ -43,7 +49,8 @@ export default function Pathway() {
           stone.style.height = "100%";
           tile.appendChild(stone);
           boardData[row][col] = 1;
-        } else {
+        } 
+        else {
           const meadow = [flowertile11, flowertile12, flowertile8, flowertile10];
           const fieldtile = meadow[Math.floor(Math.random() * meadow.length)];
           const grass = document.createElement("img");

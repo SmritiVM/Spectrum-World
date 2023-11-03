@@ -5,7 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 99vh; /* Make sure the body takes up the full height of the viewport */
+    /*background-image: url('flowertile11.png');*/
+    height: 100vh; /* Make sure the body takes up the full height of the viewport */
 }
 
 #board {
@@ -29,8 +30,8 @@
 }
 
 #character {
-    width: 5.2vw;
-    height: 5.2vw;
+    width: 5vw;
+    height: 5vw;
     position: absolute;
     bottom: 0;
 }
