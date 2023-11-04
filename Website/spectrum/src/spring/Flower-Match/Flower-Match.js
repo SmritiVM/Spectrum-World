@@ -1,5 +1,7 @@
 // Flower-Match minigame
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 import { Container } from "react-bootstrap";
 
 import {images} from './flowers';
@@ -10,10 +12,18 @@ import './Flower-Match.css';
 import '../Spring.css'
 
 export default function FlowerMatch(){
+    const navigate = useNavigate();
+
+    const goToEnd = () => {
+        navigate('/springend');
+    }
+
     const COVER_IMG = "https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-pixabay-235985-scaled.jpg";
     const [imagesArray, setImagesArray] = useState([]);
     const [cardsChosen, setCardsChosen] = useState([]);
     const [cardsChosenIds, setCardsChosenIds] = useState([]); //Maintaining sep array for ids because 2 pics may be the same but not 2 ids
+    const [points, setPoints] = useState(0)
+    
     
     //To not flip successfully matched pairs
     const [openCards, setOpenCards] = useState([]);
@@ -44,8 +54,14 @@ export default function FlowerMatch(){
             setCardsChosenIds(cardsChosenIds => cardsChosenIds.concat(index));
 
             if (cardsChosen.length === 1){
+                //Checking if the images are the same
                 if (cardsChosen[0] === image){
+                    setPoints(points => points + 1)
                     setOpenCards(openCards => openCards.concat([cardsChosen[0], image]))
+                    if (points === 11){
+                        alert("Yay! You won!");
+                        goToEnd();
+                    }
                 }
 
                 setTimeout(() => {

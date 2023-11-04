@@ -1,5 +1,6 @@
   .imageBoard{
-    margin-top: 5%;
+    scale: 1.25;
+    margin-top: 6%;
     filter: saturate(200%);
   }
   
