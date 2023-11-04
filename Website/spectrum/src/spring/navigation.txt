@@ -42,3 +42,19 @@ setAvatar(none)
     setDialogue(thanks)
     setNext(navigate to flower)
 
+
+SpringEnd.js
+ -> setAvatar(buzz)
+    setDialogue(thanks)
+    setInstructions()
+    setNext(goToUser1)
+1. goToUser1() -> setAvatar(user)
+    setDialogue(bye buzz)
+    setInstructions()
+    setNext(goToEnd)
+2. goToEnd() -> 
+    setInstructions(last statement + goToSummer)
+    setAvatar()
+    setDialogue()
+    setNext()
+3. goToSummer() -> navigate to summer page
