@@ -13,6 +13,8 @@ import defaultAvatar from "./assets/avatar.png";
 import WebsiteBackground from "./assets/Background.jpg";
 import BeeGarden from "./Bee-Game/assets/bee_garden.jpeg";
 import Bee from "./Bee-Game/assets/bee.png";
+import Honey from "./assets/honey.png";
+import FlowerBouquet from "./assets/flower_bouquet.png";
 
 import "./Bee-Game/BeeGame.css";
 import "./Spring.css";
@@ -50,11 +52,13 @@ export default function SpringEnd(){
     "Bzz..bzz..Bye!"]);
     const [avatar, setAvatar] = useState(<AvatarIcon alt = "Bee" src = {Bee} style={{"scale":"5"}} />)
     const [instructions, setInstructions] = useState()
-    
+    const [contentContrast, setContentContrast] = useState("100%");
+
     const goToSummer = () => {
         navigate('/summer');
     }
     const goToEnd = () => {
+        setContentContrast("100%");
         setInstructions(
             <Container fluid>
                 <Row>
@@ -64,20 +68,22 @@ export default function SpringEnd(){
                 </Row>
                 <Row>
                     <Col md = {6}>
-                    <img className="item" src = {Bee}></img>
+                    <img className="item" src = {Honey} style={{"scale":"1.5", "marginLeft": "90px"}}></img>
                     </Col>
                     
                     <Col md = {4}>
-                    <img  className = "item" src = {Bee}></img>
+                    <img  className = "item" src = {FlowerBouquet} style={{"scale":"2"}}></img>
                     </Col>
                 </Row>
                 <Row>
                     <p>Now let's move ahead to the next season, shall we?</p>
                 </Row>
                 <Row>
+                    <center>
                     <Button  className="helpChoice" onClick={goToSummer}>
                                 Get Ready for the heat!
                     </Button>
+                    </center>
                 </Row>
             </Container>
         )
@@ -102,8 +108,7 @@ export default function SpringEnd(){
                 <Container fluid className = "instructions">
                    {instructions} 
                 </Container>
-                <Container fluid className="content">
-                     {/* style = {{"backdropFilter":{contentContrast}}}> */}
+                <Container fluid className="content" style = {{"backdropFilter":"contrast(60%)"}}>
                     <Row>
                         <Col md = {4}>
                             {avatar}
