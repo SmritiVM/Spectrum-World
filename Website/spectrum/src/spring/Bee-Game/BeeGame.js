@@ -1,6 +1,6 @@
 import {useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import {Container, Row , Col} from "react-bootstrap";
+import {Container, Row , Col, Button} from "react-bootstrap";
 import { IconButton} from '@mui/material';
 import {styled} from '@mui/material/styles';
 
@@ -19,7 +19,7 @@ import Duckie from "./assets/duckie.png";
 
 import "../Spring.css";
 import "./BeeGame.css";
-import {Button}  from "react-bootstrap";
+
 
 const user = "Alex";
 
