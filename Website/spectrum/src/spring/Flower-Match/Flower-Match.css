@@ -1,5 +1,6 @@
+ 
   .imageBoard{
-    scale: 1.25;
+    scale: 1.2;
     margin-top: 6%;
     filter: saturate(200%);
   }
@@ -12,7 +13,7 @@
   
   .imageCard {
     width: 100%;
-    max-width: 100px;
+    max-width: 80px;
     height: 100px;
     cursor: pointer;
     object-fit: cover;

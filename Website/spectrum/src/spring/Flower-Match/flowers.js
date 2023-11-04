@@ -12,5 +12,5 @@ import Cherry from './Flowers_pic/cherry.jpg';
 import Lily from './Flowers_pic/lily.jpeg';
 
 export const images = [
-	Bouganvilla, Daffodil, Daisy, Hibiscus, Hyacinth, Rose, Sunflower, Bluebell, Tulip, Orchid, Cherry, Lily
+	Bouganvilla, Daffodil, Daisy, Hibiscus, Rose, Sunflower, Tulip, Cherry,
 ]

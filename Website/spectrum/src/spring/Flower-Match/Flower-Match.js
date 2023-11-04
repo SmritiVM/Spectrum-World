@@ -58,7 +58,7 @@ export default function FlowerMatch(){
                 if (cardsChosen[0] === image){
                     setPoints(points => points + 1)
                     setOpenCards(openCards => openCards.concat([cardsChosen[0], image]))
-                    if (points === 11){
+                    if (points === 7){
                         alert("Yay! You won!");
                         goToEnd();
                     }
@@ -88,7 +88,7 @@ export default function FlowerMatch(){
                     <div className="row imgRow">
                         {imagesArray.map((image, index) => {
                             return(
-                                <div className = "col-4 col-lg-2 flipped" key = {index} onClick={() => flipImage(image, index)}>
+                                <div className = "col-4 col-lg-3 flipped" key = {index} onClick={() => flipImage(image, index)}>
                                 <img src = {isCardChosen(image, index) ? image : COVER_IMG} alt = "" 
                                 className= "imageCard"/>
                                 </div>
