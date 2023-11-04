@@ -1,11 +1,15 @@
 import React, { useEffect, useRef } from "react";
-import "./pathwaystyle.css";
+import { Container } from "react-bootstrap";
+
 import stonetile from './stonetile.png';
 import flowertile11 from './flowertile11.png';
 import flowertile12 from './flowertile12.png';
 import flowertile8 from './flowertile8.png';
 import flowertile10 from './flowertile10.png';
 import avatar from './avatar.png';
+import WebsiteBackground from "../assets/Background.jpg";
+
+import "./pathwaystyle.css";
 
 export default function Pathway() {
   const tileSize = "5.2vw";
@@ -122,9 +126,13 @@ export default function Pathway() {
   }, []);
 
   return (
-    <div className="pathwayGrid">
-      <div ref={boardRef} id="board"></div>
-      <img ref={personRef} id="character" src={avatar} alt="Person"></img>
-    </div>
+    <Container fluid className="back" style = {{"backgroundImage": `url(${WebsiteBackground})`}}>
+          <Container fluid className = "spring">
+              <div className="pathwayGrid">
+                <div ref={boardRef} id="board"></div>
+                <img ref={personRef} id="character" src={avatar} alt="Person"></img>
+              </div>
+          </Container>
+    </Container>
   );
 }
