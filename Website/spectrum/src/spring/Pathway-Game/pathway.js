@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { Container } from "react-bootstrap";
+import React, { useEffect, useRef, useState } from "react";
+import { Container, Modal, Button } from "react-bootstrap";
 
 import stonetile from './stonetile.png';
 import flowertile11 from './flowertile11.png';
@@ -7,6 +7,11 @@ import flowertile12 from './flowertile12.png';
 import flowertile8 from './flowertile8.png';
 import flowertile10 from './flowertile10.png';
 import avatar from './avatar.png';
+import Happy from './happy.png';
+import Angry from './angry.png';
+import Sad from './sad.png';
+
+
 import WebsiteBackground from "../assets/Background.jpg";
 
 import "./pathwaystyle.css";
@@ -29,6 +34,78 @@ export default function Pathway() {
   
   let PersonRow = numRows-1;
   let PersonCol = midCol;
+
+  const [count_q, setCount_q] = useState(0);
+
+
+  const questions = [
+    {
+      text: "What is your favorite color?",
+      options: ["Red", "Blue", "Green"],
+      images: [Angry, Sad, Happy],
+      answer: "Green"
+    },
+    // Add more questions as needed
+  ];
+
+  function generateQuestion(count) {
+    return questions[count];
+  }
+  
+  const [showModal, setShowModal] = useState(false);
+  const [currentQuestion, setCurrentQuestion] = useState(null);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleShowModal = () => {
+    const quest = generateQuestion(count_q); // Assuming you have a count variable
+    console.log("Showing modal with question:", quest);
+    setCurrentQuestion(quest);
+    setShowModal(true);
+  };
+
+  function showQuestionModal() {
+    if (!currentQuestion) {
+      return null;
+    }
+    return (
+      <Modal show={showModal} onHide={handleCloseModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>{currentQuestion.text}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {currentQuestion.options.map((option, index) => (
+            <div key={index}>
+              <img src={currentQuestion.images[index]} alt={`Option ${index + 1}`} />
+              <Button variant="primary" onClick={() => handleQuestionAnswer(option)}>
+                {option}
+              </Button>
+            </div>
+          ))}
+        </Modal.Body>
+      </Modal>
+    );
+  }
+
+  function handleQuestionAnswer(selectedOption) {
+    if (selectedOption === currentQuestion.answer) {
+      // Correct answer logic here
+      console.log("Correct!");
+      handleCloseModal();
+    } else {
+      // Incorrect answer logic here
+      console.log("Incorrect!");
+    }
+  
+    // Additional logic or actions based on the answer
+    // For example, update the grid or perform other actions
+    createGrid();
+  
+    // Close the modal after answering
+  }
+  
 
   function createGrid() {
     for (let row = 0; row < numRows; row++) {
@@ -76,8 +153,6 @@ export default function Pathway() {
     const vwToPx = window.innerWidth / 100;
     const top = PersonRow * vwToPx * parseFloat(tileSize);
     const left = PersonCol * vwToPx * parseFloat(tileSize);
-    //const top = PersonRow * tileSize;
-    //const left = PersonCol * tileSize;
     personRef.current.style.top = `${top}px`;
     personRef.current.style.left = `${left}px`;
   }
@@ -92,6 +167,10 @@ export default function Pathway() {
         if (PersonRow > 0 && (boardData[PersonRow - 1][PersonCol] === 1)) {
           PersonRow--;
           updatePersonPos();
+          if (PersonRow === 0) {
+            console.log("Showing modal...");
+            handleShowModal();
+          }
         }
         break;
       case "ArrowDown":
@@ -131,6 +210,7 @@ export default function Pathway() {
               <div className="pathwayGrid">
                 <div ref={boardRef} id="board"></div>
                 <img ref={personRef} id="character" src={avatar} alt="Person"></img>
+                {showQuestionModal()}
               </div>
           </Container>
     </Container>
