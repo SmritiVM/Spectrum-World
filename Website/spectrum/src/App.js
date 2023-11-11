@@ -14,6 +14,7 @@ import SpringEnd from './spring/SpringEnd.js';
 
 //Summer imports
 import Summer from './summer/Summer.js';
+import Puzzle from './summer/Puzzle.js';
 
 //Autumn imports
 import AppleCatch from './autumn/catchApple.js';
@@ -36,6 +37,7 @@ export default function page(){
 
                 {/* Summer Routes */}
                 <Route path = "/summer" element = {<Summer/>}/>
+                <Route path = "/summer/puzzle" element = {<Puzzle/>}/>
 
                  {/* Autumn Routes */}
                  <Route path = "/autumn/applecatch" element = {<AppleCatch/>}/>

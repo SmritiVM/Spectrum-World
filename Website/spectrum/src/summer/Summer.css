@@ -1,0 +1,33 @@
+.summer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: saturate(160%);
+    scale: 0.85;
+    border-radius: 50px;
+}
+
+
+.puzzle-container {
+    width: 80vh; 
+    height: 80vh;
+    scale: 1;
+    border: 1px solid #606060;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    filter: saturate(100%);
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25); 
+}
+
+.hint-image{
+    width: 200px;
+    height: 200px;
+}
+.hint-button{
+    height: fit-content;
+    margin: 5px;
+}
