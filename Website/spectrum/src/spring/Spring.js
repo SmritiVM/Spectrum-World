@@ -81,7 +81,7 @@ export default function Spring(){
         "Come on let's go explore!"]);
         setAvatar(<AvatarIcon alt = "Person" src = {defaultAvatar} />);
         setNext(
-            <NextButton onClick = {() => navigate("/pathway")}><NextIcon/></NextButton>
+            <NextButton onClick = {() => navigate("/spring/pathway")}><NextIcon/></NextButton>
         )
     }
     // All background changing functions

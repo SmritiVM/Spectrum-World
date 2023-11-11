@@ -15,7 +15,7 @@ export default function FlowerMatch(){
     const navigate = useNavigate();
 
     const goToEnd = () => {
-        navigate('/springend');
+        navigate('/spring/end');
     }
 
     const COVER_IMG = "https://progitek.no/privat/bp/wp-content/uploads/2021/09/pexels-pixabay-235985-scaled.jpg";

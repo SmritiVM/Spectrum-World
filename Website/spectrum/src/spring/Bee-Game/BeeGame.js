@@ -70,7 +70,7 @@ export default function BeeGame(){
         setAvatar(<AvatarIcon alt = "Bee" src = {Bee} style={{"scale":"5"}} />)
         setDialogue(["Thank you! Off we go, buzzing to infinity and bee-yond!"])
         setNext(
-            <NextButton onClick = {() => navigate("/flower")}><NextIcon/></NextButton>
+            <NextButton onClick = {() => navigate("/spring/flower")}><NextIcon/></NextButton>
         )
 
     }

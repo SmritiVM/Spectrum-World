@@ -29,16 +29,16 @@ export default function page(){
 
                 {/* Spring Routes */}
                 <Route path = "/spring" element = {<Spring/>}/>
-                <Route path = "/flower" element = {<FlowerMatch/>}/>
-                <Route path = "/pathway" element = {<Pathway/>}/>
-                <Route path = "/bee" element = {<BeeGame/>}/>
-                <Route path = "/springend" element = {<SpringEnd/>}/>
+                <Route path = "/spring/flower" element = {<FlowerMatch/>}/>
+                <Route path = "/spring/pathway" element = {<Pathway/>}/>
+                <Route path = "/spring/bee" element = {<BeeGame/>}/>
+                <Route path = "/spring/end" element = {<SpringEnd/>}/>
 
                 {/* Summer Routes */}
                 <Route path = "/summer" element = {<Summer/>}/>
 
                  {/* Autumn Routes */}
-                 <Route path = "/applecatch" element = {<AppleCatch/>}/>
+                 <Route path = "/autumn/applecatch" element = {<AppleCatch/>}/>
             </Routes>
         </Router>
     );
