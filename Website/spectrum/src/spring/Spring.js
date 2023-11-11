@@ -10,7 +10,7 @@ import {Avatar} from "@mui/material";
 import Typewriter from "typewriter-effect";
 
 import defaultAvatar from "./assets/avatar.png";
-import WebsiteBackground from "./assets/Background.jpg";
+import WebsiteBackground from "../assets/Background.jpg";
 import Back1 from "./assets/backgrounds/back_1.png";
 import Back2 from "./assets/backgrounds/back_2.png";
 import Back3 from "./assets/backgrounds/back_3.png";

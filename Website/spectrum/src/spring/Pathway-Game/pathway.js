@@ -12,7 +12,7 @@ import Angry from './angry.png';
 import Sad from './sad.png';
 
 
-import WebsiteBackground from "../assets/Background.jpg";
+import WebsiteBackground from "../../assets/Background.jpg";
 
 import "./pathwaystyle.css";
 

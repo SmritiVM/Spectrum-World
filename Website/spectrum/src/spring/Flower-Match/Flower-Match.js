@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container } from "react-bootstrap";
 
 import {images} from './flowers';
-import WebsiteBackground from "../assets/Background.jpg";
+import WebsiteBackground from "../../assets/Background.jpg";
 import BeeGarden from "../Bee-Game/assets/bee_garden.jpeg";
 
 import './Flower-Match.css';

@@ -11,7 +11,7 @@ import Typewriter from "typewriter-effect";
 
 import defaultAvatar from "../assets/avatar.png";
 import BeeGarden from "./assets/bee_garden.jpeg";
-import WebsiteBackground from "../assets/Background.jpg";
+import WebsiteBackground from "../../assets/Background.jpg";
 
 import Bee from "./assets/bee.png";
 import Cow from "./assets/cow.png";

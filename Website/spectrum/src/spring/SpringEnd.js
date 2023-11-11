@@ -10,7 +10,7 @@ import {Avatar} from "@mui/material";
 import Typewriter from "typewriter-effect";
 
 import defaultAvatar from "./assets/avatar.png";
-import WebsiteBackground from "./assets/Background.jpg";
+import WebsiteBackground from "../assets/Background.jpg";
 import BeeGarden from "./Bee-Game/assets/bee_garden.jpeg";
 import Bee from "./Bee-Game/assets/bee.png";
 import Honey from "./assets/honey.png";
