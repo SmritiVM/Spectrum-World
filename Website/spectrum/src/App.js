@@ -17,6 +17,7 @@ import Summer from './summer/Summer.js';
 import Puzzle from './summer/Puzzle.js';
 
 //Autumn imports
+import Autumn from './autumn/Autumn.js';
 import AppleCatch from './autumn/catchApple.js';
 export default function page(){
     return (
@@ -40,6 +41,7 @@ export default function page(){
                 <Route path = "/summer/puzzle" element = {<Puzzle/>}/>
 
                  {/* Autumn Routes */}
+                 <Route path = "/autumn" element = {<Autumn/>}/>
                  <Route path = "/autumn/applecatch" element = {<AppleCatch/>}/>
             </Routes>
         </Router>

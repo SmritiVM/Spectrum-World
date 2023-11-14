@@ -67,6 +67,7 @@ const CatchTheAppleGame = () => {
         clearInterval(basketInterval);
         clearInterval(appleInterval);
         alert('Game Over! You scored 10 points.');
+        //navigate("/autumn/Autummn.js")
       }
     }, 70); // Adjust the interval based on the falling speed
 
