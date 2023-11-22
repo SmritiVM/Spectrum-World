@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Modal, Button } from "react-bootstrap";
 
-import stonetile from './stonetile.png';
-import flowertile11 from './flowertile11.png';
-import flowertile12 from './flowertile12.png';
-import flowertile8 from './flowertile8.png';
-import flowertile10 from './flowertile10.png';
-import avatar from './avatar.png';
-import Happy from './happy.png';
-import Angry from './angry.png';
-import Sad from './sad.png';
+import stonetile from './assets/stonetile.png';
+import flowertile11 from './assets/flowertile11.png';
+import flowertile12 from './assets/flowertile12.png';
+import flowertile8 from './assets/flowertile8.png';
+import flowertile10 from './assets/flowertile10.png';
+import avatar from './assets/avatar.png';
+import Happy from './assets/happy.png';
+import Angry from './assets/angry.png';
+import Sad from './assets/sad.png';
 
 
 import WebsiteBackground from "../../assets/Background.jpg";
@@ -76,6 +76,7 @@ export default function Pathway() {
           <Modal.Title>{currentQuestion.text}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <div className="modalQuestions">
           {currentQuestion.options.map((option, index) => (
             <div key={index}>
               <img src={currentQuestion.images[index]} alt={`Option ${index + 1}`} />
@@ -84,6 +85,7 @@ export default function Pathway() {
               </Button>
             </div>
           ))}
+          </div>
         </Modal.Body>
       </Modal>
     );
