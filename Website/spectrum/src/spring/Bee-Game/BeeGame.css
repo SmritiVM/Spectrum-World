@@ -4,11 +4,25 @@
 }
 
 .helpChoice{
-    font-size: 2vw;
-    width: 200px;
-    height: 100px;
+    font-size: 1.75vw;
+    padding: 30px;
     margin: 20px;
+    border: 2px solid blueviolet;
     border-radius: 30px;
+    background-color: blueviolet;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.helpChoice:hover{
+    background-color: blueviolet;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+
+}
+
+.helpChoice:focus{
     background-color: blueviolet;
 }
 

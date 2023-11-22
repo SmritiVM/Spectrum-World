@@ -76,7 +76,7 @@ export default function BeeGame(){
         setInstructions(
             <Container fluid>
                 <Row>
-                    <p>Could you help Buzz find some flowers?</p>
+                    <p style={{fontSize:"2vw"}}>Could you help Buzz find some flowers?</p>
                 </Row>
                 <Row>
                     <Col md = {6}>
@@ -128,9 +128,9 @@ export default function BeeGame(){
 
     const goToGuessing = () => {
         setInstructions(
-            <Container fluid className="soundGuess">
+            <Container fluid>
             <Row>
-                <p>Who is hiding behind in flowers?</p>
+                <p style={{fontSize:"2vw"}}>Who is hiding behind the flowers?</p>
             </Row>
             <Row>
                 <Col md = {4}>

@@ -62,7 +62,7 @@ export default function SpringEnd(){
         setInstructions(
             <Container fluid>
                 <Row>
-                    <p>Hurray! You've managed to complete the spring season! Well Done!
+                    <p style={{fontSize:"1.7vw"}}>Hurray! You've managed to complete the spring season! Well Done!
                     <br/>Here's a token of appreciation from Buzz
                     </p>
                 </Row>
@@ -76,11 +76,11 @@ export default function SpringEnd(){
                     </Col>
                 </Row>
                 <Row>
-                    <p>Now let's move ahead to the next season, shall we?</p>
+                    <p style={{fontSize:"1.7vw"}}>Now let's move ahead to the next season, shall we?</p>
                 </Row>
                 <Row>
                     <center>
-                    <Button  className="helpChoice" onClick={goToSummer}>
+                    <Button  className="helpChoice" style = {{marginTop:"5px"}} onClick={goToSummer}>
                                 Get Ready for the heat!
                     </Button>
                     </center>
