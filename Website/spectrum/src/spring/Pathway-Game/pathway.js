@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Modal, Button } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 
 import stonetile from './assets/stonetile.png';
 import flowertile11 from './assets/flowertile11.png';
@@ -35,8 +36,16 @@ export default function Pathway() {
   let PersonRow = numRows-1;
   let PersonCol = midCol;
 
-  const [count_q, setCount_q] = useState(0);
+  const navigate = useNavigate();
 
+    //const LeavePathway = () => {
+    //    navigate('/spring/bee');
+    //}
+  
+    //const [forceRender, setForceRender] = useState(false);
+
+  //let count_q = 0;
+  let count_q = parseInt(localStorage.getItem('count_q')) || 0;
 
   const questions = [
     {
@@ -45,11 +54,43 @@ export default function Pathway() {
       images: [Angry, Sad, Happy],
       answer: "Green"
     },
+    {
+      text: "If someone is crying, what emotion are they likely experiencing?",
+      options: ["Joy", "Grief", "Suprise"],
+      images: [Angry, Sad, Happy],
+      answer: "Grief"
+    },
+    {
+      text: "What emotion is commonly associated with a smiling face?",
+      options: ["Happiness", "Anger", "Sadness"],
+      images: [Angry, Sad, Happy],
+      answer: "Happiness"
+    },
+    {
+      text: "Your friend is excited about an achievement. How do you respond?",
+      options: ["Express disinterest", "Listen and congratulate them", "Share your own achievements"],
+      images: [Angry, Sad, Happy],
+      answer: "Listen and congratulate them"
+    },
+    {
+      text: "q5",
+      options: ["Express disinterest", "Listen and congratulate them", "Share your own achievements"],
+      images: [Angry, Sad, Happy],
+      answer: "Listen and congratulate them"
+    },
+    {
+      text: "q6",
+      options: ["Express disinterest", "Listen and congratulate them", "Share your own achievements"],
+      images: [Angry, Sad, Happy],
+      answer: "Listen and congratulate them"
+    },
     // Add more questions as needed
   ];
 
   function generateQuestion(count) {
-    return questions[count];
+    if (PersonCol < midCol){
+    return questions[count];}
+    else{return questions[count + 3]}
   }
   
   const [showModal, setShowModal] = useState(false);
@@ -57,9 +98,20 @@ export default function Pathway() {
 
   const handleCloseModal = () => {
     setShowModal(false);
+    if (count_q === 2){
+      localStorage.removeItem('count_q');
+      navigate('/spring/bee');
+    }
+    else{
+      count_q += 1;
+      localStorage.setItem('count_q', count_q);
+      window.location.reload();}
+    //setForceRender(prev => !prev);}
   };
 
   const handleShowModal = () => {
+    //count_q += 1;
+    console.log("Count is",count_q);
     const quest = generateQuestion(count_q); // Assuming you have a count variable
     console.log("Showing modal with question:", quest);
     setCurrentQuestion(quest);
@@ -94,16 +146,18 @@ export default function Pathway() {
   function handleQuestionAnswer(selectedOption) {
     if (selectedOption === currentQuestion.answer) {
       // Correct answer logic here
+      alert("Wow! You got it")
       console.log("Correct!");
       handleCloseModal();
     } else {
       // Incorrect answer logic here
+      alert("Hmmm... Not quite right. Lets try again")
       console.log("Incorrect!");
     }
   
     // Additional logic or actions based on the answer
     // For example, update the grid or perform other actions
-    createGrid();
+    //createGrid();
   
     // Close the modal after answering
   }
