@@ -57,7 +57,7 @@ export default function Spring(){
     const [instructions, setInstructions] = useState(
         <Typewriter
             options = {{
-                delay: 0,
+                delay: 70,
                 cursor: "",
                 deleteSpeed: 0
             }}
@@ -78,7 +78,8 @@ export default function Spring(){
     const goToPathway = () => {
         setDialogue(["Wow! Where did this pathway appear from?",
         "You know what this means?",
-        "Come on let's go explore!"]);
+        "Come on let's go explore!",
+        "*Click on the arrow to proceed*"]);
         setAvatar(<AvatarIcon alt = "Person" src = {defaultAvatar} />);
         setNext(
             <NextButton onClick = {() => navigate("/spring/pathway")}><NextIcon/></NextButton>
@@ -90,7 +91,8 @@ export default function Spring(){
         setAvatar();
         setDialogue([`${user}` + " gets ready and sets out to explore the beauty outside.", 
         "The lush green trees and the colourful array of flowers sure look enticing.",
-    `${user}` + " walks ahead and notices a pathway that leads outside the garden."]);
+    `${user}` + " walks ahead and notices a pathway that leads outside the garden.",
+    "*Click on the arrow to proceed*"]);
         setNext(
             <NextButton onClick = {goToPathway}><NextIcon/></NextButton>
         )
@@ -99,7 +101,7 @@ export default function Spring(){
 
     const goToBack3 = () => {
         setBackground(`url(${Back3})`);
-        setDialogue(["Oh what a pretty sight!", "The trees look so fresh and the flowers are so vibrant.", "Let's go out and see more!"]);
+        setDialogue(["Oh what a pretty sight!", "The trees look so fresh and the flowers are so vibrant.", "Let's go out and see more!", "*Click on the arrow to proceed*"]);
         setAvatar(<AvatarIcon alt = "Person" src = {defaultAvatar} />);
         setNext(
             <NextButton onClick = {goToBack4}><NextIcon/></NextButton>
@@ -111,7 +113,7 @@ export default function Spring(){
         // setAutoStart(true);
         setInstructions();
         setDialogue(["It is a wonderful spring morning with the sun shining through the window and the birds singing their song.",
-         `${user}` + " slowly wakes up feeling energetic and decides to go and check outside the window."]);
+         `${user}` + " slowly wakes up feeling energetic and decides to go and check outside the window.", "*Click on the arrow to proceed*"]);
         setNext(
             <NextButton onClick = {goToBack3}><NextIcon/></NextButton>
         )
@@ -145,7 +147,7 @@ export default function Spring(){
                                     strings: dialogue,
                                     autoStart: true,
                                     deleteSpeed: 0,
-                                    delay: 0,
+                                    delay: 70,
                                     cursor: "",
                                 }}    
                             />

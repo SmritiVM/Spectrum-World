@@ -49,7 +49,7 @@ export default function SpringEnd(){
     const [dialogue, setDialogue] = useState(["Thank you for the help, " + `${user}` + "." ,
     "I'll be returning to my hive to store all this nectar collected.",
     "It was lovely meeting you, " + `${user}` + " and thanks once again",
-    "Bzz..bzz..Bye!"]);
+    "Bzz..bzz..Bye!", "*Click on the arrow to proceed*"]);
     const [avatar, setAvatar] = useState(<AvatarIcon alt = "Bee" src = {Bee} style={{"scale":"5"}} />)
     const [instructions, setInstructions] = useState()
     const [contentContrast, setContentContrast] = useState("100%");
@@ -94,7 +94,7 @@ export default function SpringEnd(){
     const goToUser1 = () => {
         setAvatar(<AvatarIcon alt = "Person" src = {defaultAvatar} />);
         setDialogue(["Bye Bye Buzz! It was nice meeting you too.",
-        "I hope to see you next spring."])
+        "I hope to see you next spring.", "*Click on the arrow to proceed*"])
         setNext(<NextButton onClick = {goToEnd}><NextIcon/></NextButton>)
     } 
     const [next, setNext] = useState(
@@ -120,7 +120,7 @@ export default function SpringEnd(){
                                     strings: dialogue,
                                     autoStart: true,
                                     deleteSpeed: 0,
-                                    delay: 0,
+                                    delay: 70,
                                     cursor: "",
                                 }}    
                             />

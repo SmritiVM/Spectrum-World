@@ -25,7 +25,6 @@ const user = "Alex";
 
 const NextIcon = styled(ForwardIcon)(() => ({
     fontSize: "100px",
-    // color: "rgb(11, 141, 11)",
     opacity: "1"
 }))
 
@@ -52,9 +51,8 @@ export default function BeeGame(){
     const navigate = useNavigate();
     const [dialogue, setDialogue] = useState(["Whew! " + `${user}` + " manages to answer all the questions",
     "But wait...what is this? Bzz..bzz..",
-"Who is making this sound? Who is hiding in the flowers? "]);
-    // const [pauseDuration, setPauseDuration] = useState(10000);
-    // const [autostart, setAutoStart] = useState(false);
+"Who is making this sound? Who is hiding in the flowers? ", "*Click on the arrow to proceed*"]);
+
     const [avatar, setAvatar] = useState()
     const [instructions, setInstructions] = useState()
 
@@ -68,7 +66,7 @@ export default function BeeGame(){
     const goToFlower = () => {
         setInstructions()
         setAvatar(<AvatarIcon alt = "Bee" src = {Bee} style={{"scale":"5"}} />)
-        setDialogue(["Thank you! Off we go, buzzing to infinity and bee-yond!"])
+        setDialogue(["Thank you! Off we go, buzzing to infinity and bee-yond!", "*Click on the arrow to proceed*"])
         setNext(
             <NextButton onClick = {() => navigate("/spring/flower")}><NextIcon/></NextButton>
         )
@@ -102,20 +100,20 @@ export default function BeeGame(){
     const goToBuzz2 = () => {
         setAvatar(<AvatarIcon alt = "Bee" src = {Bee} style={{"scale":"5"}} />)
         setDialogue(["Nice to meet you " +  `${user}` + ". It's a beautiful day to collect flowers, isn't it?",
-            "I've been buzzing around them to make some honey. Could you help me find some flowers?"])
+            "I've been buzzing around them to make some honey. Could you help me find some flowers?", "*Click on the arrow to proceed*"])
         setNext(<NextButton onClick = {gotoBuzzHelp}><NextIcon/></NextButton>)
     }
 
     const goToUser1 = () => {
         setAvatar(<AvatarIcon alt = "Person" src = {defaultAvatar} />)
-        setDialogue(["Hello Buzz!", "My name is " + `${user}` + "."])
+        setDialogue(["Hello Buzz!", "My name is " + `${user}` + ".", "*Click on the arrow to proceed*"])
         setNext(<NextButton onClick = {goToBuzz2}><NextIcon/></NextButton>)
     }
 
     const goToBuzz1 = () => {
         setInstructions()
         setAvatar(<AvatarIcon alt = "Bee" src = {Bee} style={{"scale":"5"}} />)
-        setDialogue(["Hello there! I'm Buzz the Bee. What is your name?"])
+        setDialogue(["Hello there! I'm Buzz the Bee. What is your name?", "*Click on the arrow to proceed*"])
         setNext(<NextButton onClick = {goToUser1}><NextIcon/></NextButton>)
     }
 
@@ -178,7 +176,7 @@ export default function BeeGame(){
                                 options = {{
                                     strings: dialogue,
                                     autoStart: true,
-                                    delay: 0,
+                                    delay: 70,
                                     deleteSpeed: 0,
                                     cursor: "",
                                 }}    
