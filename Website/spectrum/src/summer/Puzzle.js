@@ -10,12 +10,14 @@ import Sandcastle2 from "./assets/sandcastles/Sandcastle2.jpeg";
 import Sandcastle3 from "./assets/sandcastles/Sandcastle3.jpeg";
 import Sandcastle4 from "./assets/sandcastles/Sandcastle4.jpeg";
 import Sandcastle5 from "./assets/sandcastles/Sandcastle5.jpeg";
+import Sandcastle6 from "./assets/sandcastles/Sandcastle6.jpeg";
+
 
 import "./Summer.css";
 
 export default function Puzzle(){
     // Selection of puzzle image on random
-    const sandcastles = [Sandcastle1, Sandcastle2, Sandcastle3, Sandcastle4, Sandcastle5];
+    const sandcastles = [Sandcastle1, Sandcastle2, Sandcastle3, Sandcastle4, Sandcastle5, Sandcastle6];
     const [Sandcastle, setSandcastle] = useState();
 
 
