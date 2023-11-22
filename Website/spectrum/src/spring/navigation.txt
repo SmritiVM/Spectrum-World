@@ -32,15 +32,21 @@ setAvatar(none)
 5. goToBuzzHelp -> setInstructions(2 choice)
     setAvatar(), setNext(), setDialogue()
     wrong choice -> alert message  -> goToBuzz3()
-    right choice -> goToFlower
+    right choice -> goToBuzz4
 6. goToBuzz3 -> setAvatar(buzz)
     setDialogue(ah it's ok)
     setNext()
-7. goToFlower() ->
+7. goToBuzz4 -> 
     setAvatar(buzz)
     setInstructions()
     setDialogue(thanks)
-    setNext(navigate to flower)
+    setNext(goToFlower)
+8. goToFlower() ->
+    setAvatar()
+    setInstructions(instructions for flower game + option button that navigates to flower)
+    setDialogue()
+    setNext()
+
 
 
 SpringEnd.js
