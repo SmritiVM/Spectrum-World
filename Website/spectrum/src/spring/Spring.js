@@ -135,7 +135,6 @@ export default function Spring(){
                    {instructions} 
                 </Container>
                 <Container fluid className="content">
-                     {/* style = {{"backdropFilter":{contentContrast}}}> */}
                     <Row>
                         <Col md = {4}>
                             {avatar}
