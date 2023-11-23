@@ -102,12 +102,12 @@ export default function BeeGame(){
                 </Row>
                 <Row>
                     <Col md = {6}>
-                        <Button  className="helpChoice" onClick={goToBuzz4}>
+                        <Button  className="helpChoice" onClick={goToBuzz4} style={{width:"300px", height:"150px"}}>
                             Sure I'd love to!
                         </Button>
                     </Col>
                     <Col md = {6}>
-                        <Button  className="helpChoice" onClick={goToBuzz3}>
+                        <Button  className="helpChoice" onClick={goToBuzz3} style={{width:"300px", height:"150px"}}>
                             I'd like to look around for some more time. Can I help you later?
                         </Button>
                     </Col>
