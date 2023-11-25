@@ -1,0 +1,92 @@
+Summer.js
+Back2 -> closer view of beach
+Back3 -> children playing
+Intro (typewriter) -> goToBack2
+1. goToBack2()=>
+    setAvatar()
+    setInstructions()
+    setDialogue(The beach is crowded...)
+    setNext(goToBobby1)
+2. goToBobby1() =>
+    setAvatar(Bobby)
+    setInstructions()
+    setDialogue(Hello, I'm bobby...)
+    setNext(goToUser1)
+3. goToUser1() => 
+    setAvatar(User)
+    setInstructions()
+    setDialogue(Hi, I'm user)
+    setNext(gotToBobby2)
+4. goToBobby2() => 
+    setAvatar(Bobby)
+    setInstructions()
+    setDialogue(Come & play...)
+    setNext(goToChoice)
+5. goToChoice() =>
+    setAvatar()
+    setInstructions(<2 choices>
+    I'd love to join => goToBobby3
+    After sometime => goToBobby4)
+    setDialogue()
+    setNext()
+6. goToBobby3() => 
+    setAvatar(Bobby)
+    setInstructions()
+    setDialogue(Hurray)
+    setNext(goToBack3)
+7. goToBobby4() => 
+    setAvatar(Bobby)
+    setDialogue(Sure np..)
+    setNext()
+8. goToBack3() => 
+    setAvatar()
+    setInstructions()
+    setDialogue(Bobby leads user...)
+    setNext(goToDaisy1)
+9. goToDaisy1() => 
+    setAvatar(Daisy)
+    setInstructions()
+    setDialogue(Hi, I'm daisy)
+    setNext(goToUser2)
+10. goToUser2() => 
+    setAvatar(user)
+    setInstructions()
+    setDialogue(Hi, I'm user..)
+    setNext(goToBobby5)
+11. goToBobby5() =>
+    setAvatar(Bobby)
+    setInstructions()
+    setDialogue(Ah the Sandacstle competition...)
+    setNext(goToDaisy2)
+12. goToDaisy2() => 
+    setAvatar(Daisy)
+    setInstructions()
+    setDialogue(Yes we want to win)
+    setNext(goToUser3)
+13. goToUser3() =>
+    setAvatar(User)
+    setInstructions()
+    setDialogue(Why not..)
+    setNext(goToPuzzle)
+14. goToPuzzle() =>
+    setAvatar()
+    setInstructions(<instructions with button => navigate to /puzzle)
+    setDialogue()
+    setNext()
+
+Puzzle.js
+On completion navigate to /end
+
+SummerEnd.js
+setAvatar(Daisy)
+setInstructions()
+setDialogue(Wow)
+setNext(goToAutumn)
+
+goToAutumn() =>
+setAvatar()
+setInstructions(Hurray!
+Button => navigate to /autumn)
+setDialogue()
+setNext()
+
