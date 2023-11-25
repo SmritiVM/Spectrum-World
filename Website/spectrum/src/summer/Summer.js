@@ -104,7 +104,7 @@ export default function Summer(){
         setAvatar(<AvatarIcon alt = "Daisy" src = {Daisy} />)
         setInstructions()
         setDialogue(["Yes!! And we really want to win this year! Free ice-cream is just the best!",
-        "So would you like  to join our team and build the best sandcastle " + `${user}` + "?",
+        "So would you like  to join our team and build the best sandcastle, " + `${user}` + "?",
         "*Click on the arrow to proceed*"])
         setNext(<NextButton onClick = {goToUser3}><NextIcon/></NextButton>)
     }
