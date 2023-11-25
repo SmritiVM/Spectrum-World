@@ -75,9 +75,10 @@ export default function Summer(){
         setAvatar()
         setInstructions(<Container fluid>
             <Row>
-                <p style={{fontSize:"2vw"}}>Yoohoo! You're taking part in the '53rd Annual Sandcastle Competition' <br/><br/>
-                Drag and drop the puzzle pieces to complete the sandcastle and win the game😊
-                (Oh and if you are stuck, we have a hint for you too🤭)</p>
+                <p style={{fontSize:"2vw"}}>
+                Help Alex and team build the best sandcastle for the competition.<br/><br/>
+                Drag and drop the tiles to rearrange them and complete the sandcastle puzzle.
+                </p>
             </Row>
             <Row>
                 <center>
