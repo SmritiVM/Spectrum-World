@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Container, Button } from "react-bootstrap";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 
 import WebsiteBackground from "../assets/Background.jpg";
-// import Back1 from "./assets/back_1.png";
+import Back3 from "./assets/background/Back3_saturated.png";
+
 import Sandcastle1 from "./assets/sandcastles/Sandcastle1.jpeg";
 import Sandcastle2 from "./assets/sandcastles/Sandcastle2.jpeg";
 import Sandcastle3 from "./assets/sandcastles/Sandcastle3.jpeg";
@@ -16,6 +18,8 @@ import Sandcastle6 from "./assets/sandcastles/Sandcastle6.jpeg";
 import "./Summer.css";
 
 export default function Puzzle(){
+    const navigate = useNavigate();
+    
     // Selection of puzzle image on random
     const sandcastles = [Sandcastle1, Sandcastle2, Sandcastle3, Sandcastle4, Sandcastle5, Sandcastle6];
     const [Sandcastle, setSandcastle] = useState();
@@ -35,31 +39,24 @@ export default function Puzzle(){
     
     const closeHint = () => {
         setHint();
-        // setHintButton(
-        // <button onClick={viewHint}>View Hint</button>
-        // )
     }
+
     const viewHint = () => {
         setHint(
             <img src={Sandcastle} className="hint-image" alt = "Sandcastle"></img>
         )
-        // setHintButton(
-        //     <button onClick={closeHint}>Close Hint</button>
-        // )
     }
 
-    // const [hintButton, setHintButton] = useState(
-    //     <button onClick={viewHint}>View Hint</button>
-    // );
 
 
     const goToEnd = () => {
         alert("Yoohoo! You've done it!");
+        navigate("/summer/end");
+        
     }
     return(
         <Container fluid style={{"backgroundImage": `url(${WebsiteBackground})`}}>
-            <Container fluid className="summer">
-                 {/* style={{"backgroundImage": `url(${Back1})`}}> */}
+            <Container fluid className="summer" style={{"backgroundImage": `url(${Back3})`}}>
                 <div className="puzzle-container">
                     <JigsawPuzzle
                     imageSrc={Sandcastle}
@@ -68,10 +65,13 @@ export default function Puzzle(){
                     onSolved = {goToEnd}
                     />
                 </div>
-                {hint}
+                
                 {/* {hintButton} */}
-                <button onClick={viewHint} className="hint-button">View Hint</button>
-                <button onClick={closeHint} className="hint-button">Close Hint</button>
+                <div className="hint">
+                {hint}
+                <Button onClick={viewHint} className="hint-button">View Hint</Button>
+                <Button onClick={closeHint} className="hint-button">Close Hint</Button>
+                </div>
             </Container>
         </Container>
     )
