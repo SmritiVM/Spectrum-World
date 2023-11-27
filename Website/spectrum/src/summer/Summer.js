@@ -167,12 +167,12 @@ export default function Summer(){
                 </Row>
                 <Row>
                     <Col md = {6}>
-                        <Button  className="helpChoice" onClick={goToBobby3} style={{width:"300px", height:"150px"}}>
+                        <Button  className="helpChoice" onClick={goToBobby3} style={{width:"300px", height:"180px"}}>
                             Ah that sounds interesting! I’d love to join in!
                         </Button>
                     </Col>
                     <Col md = {6}>
-                        <Button  className="helpChoice" onClick={goToBobby4} style={{width:"300px", height:"150px"}}>
+                        <Button  className="helpChoice" onClick={goToBobby4} style={{width:"300px", height:"180px"}}>
                             Maybe after sometime? I’d like to enjoy the sea breeze!
                         </Button>
                     </Col>
