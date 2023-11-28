@@ -5,8 +5,10 @@
     align-items: center;
     justify-content: center;
     height: 96vh;
-    background-image: url('./fall_apple_bg.jpg');
+    background-image: url('./assets/fall_apple_bg.jpg');
     background-size: cover;
+    filter: saturate(140%);
+    scale: 0.85;
   }
   
   .game-container {

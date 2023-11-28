@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import Basket from './basket.png';
+import { useNavigate } from 'react-router-dom';
+import Basket from './assets/basket.png';
 import './catchApple.css';
 
 const getRandomPosition = () => ({
   top: 130,
-  left: 30 + Math.random() * (window.innerWidth - 60)
+  left: 35 + Math.random() * (window.innerWidth - 70)
 });
 
 const CatchTheAppleGame = () => {
+
+  const navigate = useNavigate();
+  
+  const goToEnd = () => {
+    alert("Yipee! You caught 10 apples for the pie!");
+    navigate("/autumn/end");
+  }
+
   const [applePosition, setApplePosition] = useState(getRandomPosition());
   const [basketPosition, setBasketPosition] = useState({
     top: window.innerHeight - 100,
@@ -63,11 +72,10 @@ const CatchTheAppleGame = () => {
       moveApple();
       checkCatch();
 
-      if (score === 3) {       //CHANGE SCORE TO MOVE ON
+      if (score === 10) {       //CHANGE SCORE TO MOVE ON
         clearInterval(basketInterval);
         clearInterval(appleInterval);
-        alert('Game Over! You scored 10 points.');
-        //navigate("/autumn/Autummn.js")
+        goToEnd();
       }
     }, 70); // Adjust the interval based on the falling speed
 

@@ -20,6 +20,10 @@ import SummerEnd from './summer/SummerEnd.js';
 //Autumn imports
 import Autumn from './autumn/Autumn.js';
 import AppleCatch from './autumn/catchApple.js';
+import AutumnEnd from './autumn/AutumnEnd.js';
+
+import Winter from './winter/Winter.js';
+
 export default function page(){
     return (
         // <div>
@@ -45,6 +49,10 @@ export default function page(){
                  {/* Autumn Routes */}
                  <Route path = "/autumn" element = {<Autumn/>}/>
                  <Route path = "/autumn/applecatch" element = {<AppleCatch/>}/>
+                 <Route path = "/autumn/end" element = {<AutumnEnd/>}/>
+
+                 {/* Winter Routes */}
+                 <Route path = "/winter" element = {<Winter/>}/>
             </Routes>
         </Router>
     );

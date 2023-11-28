@@ -1,0 +1,11 @@
+.autumn{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: saturate(160%);
+    scale: 0.85;
+    border-radius: 50px;
+}
