@@ -70,8 +70,8 @@ export default function AutumnEnd(){
         setBackground(`url(${making})`)
         setAvatar()
         setInstructions()
-        setDialogue(["In the kitchen, the delightful aroma of cinnamon and apples fills the air as Granny and "+ `${user}` + " work side by side.",
-        "They peel and slice the apples & sprinkle them with cinnamon and sugar.",
+        setDialogue(["In the kitchen, the delightful aroma of cinnamon and apples fills the air.",
+        "Granny and "+ `${user}` + " peel and slice the apples & sprinkle them with cinnamon and sugar.",
         "They work together, mixing ingredients and preparing the pie with joy and laughter.",
         "*Click on the arrow to proceed*"])
         setNext(<NextButton onClick = {goToGranny5}><NextIcon/></NextButton>)
