@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+
 import Basket from './assets/basket.png';
+import WebsiteBackground from "../assets/Background.jpg";
+
 import './catchApple.css';
 
 const getRandomPosition = () => ({
@@ -89,35 +93,36 @@ const CatchTheAppleGame = () => {
   }, [score, applePosition, basketPosition]);
 
   return (
-    <div className="applegame" >
-    <div className="game-container">
-    <h1>Catch the Apple Game</h1>
-      <p>Score: {score}</p>
-      <div
-        style={{
-          position: 'absolute',
-          top: applePosition.top,
-          left: applePosition.left,
-          fontSize: '24px',
-        }}
-      >
-        🍎
+    <Container fluid style={{"backgroundImage": `url(${WebsiteBackground})`, "height":"100vh", "marginTop":"-20px"}}>
+      <div className="applegame" >
+      <div className="game-container">
+      <h1>Catch the Apple Game</h1>
+        <p>Score: {score}</p>
+        <div
+          style={{
+            position: 'absolute',
+            top: applePosition.top,
+            left: applePosition.left,
+            fontSize: '24px',
+          }}
+        >
+          🍎
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            top: basketPosition.top,
+            left: basketPosition.left,
+            width: '100px',
+            height: '100px',
+            backgroundImage: `url(${Basket})`,
+            backgroundSize: 'cover'
+            //backgroundColor: 'blue',
+          }}
+        />
       </div>
-      <div
-        style={{
-          position: 'absolute',
-          top: basketPosition.top,
-          left: basketPosition.left,
-          width: '100px',
-          height: '100px',
-          backgroundImage: `url(${Basket})`,
-          backgroundSize: 'cover'
-          //backgroundColor: 'blue',
-        }}
-      />
-    </div>
-    </div>
-
+      </div>
+    </Container>
   );
 };
 
