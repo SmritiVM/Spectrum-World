@@ -165,15 +165,15 @@ export default function BeeGame(){
             </Row>
             <Row>
                 <Col md = {4}>
-                <img  className = "animalImage" src = {Duckie} onMouseOver={() => DuckAudio.play()} onClick={incorrectClick}></img>
+                <img  className = "animalImage" src = {Duckie} onMouseEnter={() => DuckAudio.play()} onMouseLeave = {() => DuckAudio.pause()} onClick={incorrectClick}></img>
                 </Col>
                 
                 <Col md = {4}>
-                <img  className = "animalImage" src = {Cow} onMouseOver={() => CowAudio.play()} onClick={incorrectClick}></img>
+                <img  className = "animalImage" src = {Cow} onMouseEnter={() => CowAudio.play()} onMouseLeave = {() => CowAudio.pause()} onClick={incorrectClick}></img>
                 </Col>
 
                 <Col md = {4}>
-                <img  className = "animalImage" src = {Bee} onMouseOver={() => BeeAudio.play()} onClick={beeClick}></img>
+                <img  className = "animalImage" src = {Bee} onMouseEnter={() => BeeAudio.play()} onMouseLeave = {() => BeeAudio.pause()} onClick={beeClick}></img>
                 </Col>
                 
             </Row>
