@@ -17,6 +17,11 @@ import Bee from "./assets/bee.png";
 import Cow from "./assets/cow.png";
 import Duckie from "./assets/duckie.png";
 
+import BeeSound from "./assets/bumblebee.mp3";
+import DuckSound from "./assets/duck-quacking.mp3";
+import CowSound from "./assets/mooing-cow.mp3";
+
+
 import "../Spring.css";
 import "./BeeGame.css";
 
@@ -48,6 +53,10 @@ const AvatarIcon = styled(Avatar)(() => ({
 
 
 export default function BeeGame(){
+    const [BeeAudio, setBeeAudio] = useState(new Audio(BeeSound));
+    const [DuckAudio, setDuckAudio] = useState(new Audio(DuckSound));
+    const [CowAudio, setCowAudio] = useState(new Audio(CowSound));
+
     const navigate = useNavigate();
     const [dialogue, setDialogue] = useState(["Whew! " + `${user}` + " manages to answer all the questions",
     "But wait...what is this? Bzz..bzz..",
@@ -156,15 +165,15 @@ export default function BeeGame(){
             </Row>
             <Row>
                 <Col md = {4}>
-                <img  className = "animalImage" src = {Duckie} onClick={incorrectClick}></img>
+                <img  className = "animalImage" src = {Duckie} onMouseOver={() => DuckAudio.play()} onClick={incorrectClick}></img>
                 </Col>
                 
                 <Col md = {4}>
-                <img  className = "animalImage" src = {Cow} onClick={incorrectClick}></img>
+                <img  className = "animalImage" src = {Cow} onMouseOver={() => CowAudio.play()} onClick={incorrectClick}></img>
                 </Col>
 
                 <Col md = {4}>
-                <img  className = "animalImage" src = {Bee} onClick={beeClick}></img>
+                <img  className = "animalImage" src = {Bee} onMouseOver={() => BeeAudio.play()} onClick={beeClick}></img>
                 </Col>
                 
             </Row>
