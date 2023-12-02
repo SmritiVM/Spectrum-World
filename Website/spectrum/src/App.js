@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// import LoginPage1 from './login.jsx';
+import LoginPage1 from './login.jsx';
 // import LoginPage2 from './signup.jsx';
 import Home from './Home.js';
 
@@ -22,8 +22,9 @@ import Autumn from './autumn/Autumn.js';
 import AppleCatch from './autumn/catchApple.js';
 import AutumnEnd from './autumn/AutumnEnd.js';
 
+//winter
 import Winter from './winter/Winter.js';
-
+import Mario from './winter/Mario_Game.js';
 export default function page(){
     return (
         // <div>
@@ -53,6 +54,10 @@ export default function page(){
 
                  {/* Winter Routes */}
                  <Route path = "/winter" element = {<Winter/>}/>
+                 <Route path = "/winter/mario" element = {<Mario/>}/>
+
+                 {/*Login Routes*/}
+                 <Route path = "/login" element = {<LoginPage1/>}/>
             </Routes>
         </Router>
     );
