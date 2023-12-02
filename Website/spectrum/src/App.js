@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import LoginPage1 from './login.jsx';
+//import LoginPage1 from './login.jsx';
 // import LoginPage2 from './signup.jsx';
 import Home from './Home.js';
 
@@ -56,8 +56,8 @@ export default function page(){
                  <Route path = "/winter" element = {<Winter/>}/>
                  <Route path = "/winter/mario" element = {<Mario/>}/>
 
-                 {/*Login Routes*/}
-                 <Route path = "/login" element = {<LoginPage1/>}/>
+                 {/* Login Routes
+                 <Route path = "/login" element = {<LoginPage1/>}/> */}
             </Routes>
         </Router>
     );
