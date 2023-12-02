@@ -22,7 +22,12 @@ import Autumn from './autumn/Autumn.js';
 import AppleCatch from './autumn/catchApple.js';
 import AutumnEnd from './autumn/AutumnEnd.js';
 
+//winter imports
 import Winter from './winter/Winter.js';
+import mario from './Winter/Mario_game/Mario_game.js';
+
+//login
+import LoginPage from './login.jsx';
 
 export default function page(){
     return (
@@ -36,6 +41,7 @@ export default function page(){
 
                 {/* Spring Routes */}
                 <Route path = "/spring" element = {<Spring/>}/>
+
                 <Route path = "/spring/flower" element = {<FlowerMatch/>}/>
                 <Route path = "/spring/pathway" element = {<Pathway/>}/>
                 <Route path = "/spring/bee" element = {<BeeGame/>}/>
@@ -53,6 +59,11 @@ export default function page(){
 
                  {/* Winter Routes */}
                  <Route path = "/winter" element = {<Winter/>}/>
+                <Route path = "/winter/mario" element = {<mario/>}></Route>
+
+                {/* Login Routes */}
+                <Route path = "/LoginPage" element = {<LoginPage/>}></Route>
+
             </Routes>
         </Router>
     );
