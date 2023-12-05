@@ -2,7 +2,6 @@ import React from 'react';
 import './loginsignupstyle.css';
 import logoimage from './logo.png';
 
-
 export default function LoginPage() {
   return (
     <div className="login-card-container">
